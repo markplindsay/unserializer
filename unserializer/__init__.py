@@ -8,7 +8,7 @@ import phpserialize
 app = Flask('unserializer')
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/unserializer', methods=['GET', 'POST'])
 def index():
     serialized = request.form.get('serialized', '')
     unserialized = None
