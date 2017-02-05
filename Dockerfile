@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /usr/src/app
 
-EXPOSE 5000
+EXPOSE 5001
 
 ENTRYPOINT ["gunicorn"]
-CMD ["--bind=0.0.0.0:5000", "application"]
+CMD ["--bind=0.0.0.0:5001", "--reload", "application"]
