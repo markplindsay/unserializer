@@ -11,4 +11,4 @@ COPY . /usr/src/app
 EXPOSE 5001
 
 ENTRYPOINT ["gunicorn"]
-CMD ["--bind=0.0.0.0:5001", "--reload", "application"]
+CMD ["--config", "config.py", "application"]
